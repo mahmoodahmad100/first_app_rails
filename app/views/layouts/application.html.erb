@@ -1,0 +1,30 @@
+<%= render 'partials/header' %>
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+
+					<% flash.each do |key, value| %>
+						<h2><%= value %></h2>
+					<% end %>
+					<%= yield %>
+
+					<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				
+				<%= render 'partials/sidebar' %>
+
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+	<div id="footer">
+		<p>&copy; 2013, My Rails Blog - Sample Project</p>
+	</div>
+</div>
+<!-- end #footer -->
+
+</body>
+</html>

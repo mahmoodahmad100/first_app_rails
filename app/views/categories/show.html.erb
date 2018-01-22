@@ -1,0 +1,6 @@
+<h1><%= @category.name %></h1>
+<% if @category.posts.each do |post| %>
+	<h2><%= link_to post.title,post %></h2>
+<% end.empty? %>
+	<h2>sorry no posts in this category</h2>
+<% end %>

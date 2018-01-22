@@ -1,0 +1,16 @@
+<h2> new post </h2>
+
+<%= form_for @post do |f| %>
+
+	<%= f.label :title %>
+	<%= f.text_field :title %> <br>
+
+	<%= f.label :body %>
+	<%= f.text_area :body %><br>
+
+	<%= f.label :category_id %>
+	<%= f.select :category_id, @categories.collect {|category| [category.name, category.id]}, {:include_blank => "select a category"} %><br>
+
+	<%= f.submit "post" %>
+
+<% end %>
